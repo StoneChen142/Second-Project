@@ -1,6 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
@@ -8,9 +11,37 @@
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
     <script>
+      function login()
+      {
+      	username = document.getElementById('username');
+	      password = document.getElementById('password');
+        if (username==='user' && password==='')
+        {
+          ons.notification.alert(‘…’)
+        }
+        else
+        {
+          ons.notification.alert (‘…’)
+        }
+      }
     </script>
 </head>
 <body>
+  <ons-page>
+  <div style="text-align: center; margin-top: 200px">
+  <p>
+  <ons-input id="username" placeholder="Username" modifier="underbar">
+  </ons-input>
+  </p>
+  <p>
+  <ons-input id="password" placeholder="Password" type="password" modifier="underbar">
+  </ons-input>
+  </p>
+  <p>
+  <ons-button onClick='login()'>Sign in</ons-button>
+  </p>
+  </div>
+  </ons-page>
 	<br />
     <h2>Ernest Shackleton(1874 - 1922)</h2>
     <img src="Images/shackletonicon.jpg" alt="Ernest Shackleton at Dulwich College">
